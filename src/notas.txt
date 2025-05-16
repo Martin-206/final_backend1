@@ -1,0 +1,10 @@
+Servidor en: [http://localhost:3005](http://localhost:3005)
+
+desde postman
+/api/products: Rutas de productos con paginación, filtro y ordenamiento
+/api/carts: Rutas para crear, actualizar, eliminar y poblar carritos
+/carts/"ID del carrito": Vista carrito específico
+
+
+Productos: http://localhost:3005/products
+Carrito de prueba: http://localhost:3005/carts/682630e85d764dbf3e469830

@@ -1,0 +1,25 @@
+{
+  "name": "entrega_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.14.2",
+    "mongoose-paginate-v2": "^1.9.0",
+    "mongose": "^0.0.2-security",
+    "nanoid": "^5.1.5",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

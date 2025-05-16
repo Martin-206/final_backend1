@@ -1,0 +1,34 @@
+<h1>Productos</h1>
+<ul>
+    {{#each products}}
+    <li>
+        <strong>{{this.title}}</strong> - ${{this.price}}<br>
+        <button onclick="agregarAlCarrito('{{this._id}}')">Agregar al carrito</button>
+    </li>
+    {{/each}}
+</ul>
+
+<div>
+    {{#if hasPrevPage}}<a href="?page={{prevPage}}">Anterior</a>{{/if}}
+    Página {{page}} de {{totalPages}}
+    {{#if hasNextPage}}<a href="?page={{nextPage}}">Siguiente</a>{{/if}}
+</div>
+
+<script>
+const CARRITO_ID = "682630e85d764dbf3e469830"; //carrito creado para pruebas
+
+function agregarAlCarrito(productId) {
+    fetch(`/api/carts/${CARRITO_ID}/product/${productId}`, {
+    method: "POST"
+    })
+    .then(res => res.json())
+    .then(data => {
+    console.log(" Producto agregado", data);
+    alert("Producto agregado al carrito");
+    })
+    .catch(err => {
+    console.error(" Error al agregar", err);
+    alert("Error al agregar al carrito");
+    });
+}
+</script>
