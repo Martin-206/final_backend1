@@ -39,17 +39,17 @@ class ProductManager {
         return await this.readProducts();
     };
 
-    // Agrega un producto nuevo
+    // agrega un producto nuevo
     addProduct = async (productData) => {
         const products = await this.readProducts();
 
-        // Validación: Todos los campos obligatorios
+        // Validacion: Todos los campos obligatorios
         const { title, description, code, price, status = true, stock, category, thumbnails = [] } = productData;
         if (!title || !description || !code || !price || stock == null || !category) {
             return "Faltan campos obligatorios";
         }
 
-        // Validar que el code no esté repetido
+        // validar que el code no esté repetido
         const codeExists = products.some(prod => prod.code === code);
         if (codeExists) {
             return "El código del producto ya exste";

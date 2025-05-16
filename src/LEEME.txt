@@ -1,4 +1,4 @@
-Servidor en: [http://localhost:3005](http://localhost:3005)
+Servidor en: [http://localhost:3005]
 
 desde postman
 /api/products: Rutas de productos con paginación, filtro y ordenamiento
